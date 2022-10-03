@@ -5,9 +5,9 @@ Program=Micro-Cap
 Component Version=10.00
 Shape Version=11.00
 Screen=1920,1080
-MCAPVersion=12.0.2.1
+MCAPVersion=12.2.0.5
 Key ID=Demo
-NLCnt=103
+NLCnt=105
 TXCnt=6
 
 [shapedef]
@@ -97,18 +97,6 @@ Rectangle=54,-18,58,-14
 FColor=None
 
 [compdef]
-Name=INV
-Definition=Subckt
-Shape=Inv
-Mask=4224
-Used=5
-memo=Inverter - Christophe Basso model for SMPS testing
-Label Offset=13,-44,16,16
-PinCnt=2
-Pin="1",a,0,0,-1,-2
-Pin="2",a,6,0,-2,-2
-
-[compdef]
 Name=Or5
 Definition=OR
 Shape=Or5
@@ -130,7 +118,7 @@ Name=And5
 Definition=AND
 Shape=And5
 Mask=4096
-Used=8
+Used=5
 Data1=5
 memo=5 Input Generic AND Gate
 Label Offset=13,13,-1,12
@@ -161,6 +149,19 @@ Pin="Out2",9,3,7,9
 Pin="Out1",9,4,7,10
 Pin="Out0",9,5,7,11
 
+[compdef]
+Name=Inverter
+Definition=INV
+Shape=Inv
+Mask=4611
+Used=11
+Data1=1
+memo=Generic Inverter Gate
+Label Offset=12,-6,11,21
+PinCnt=2
+Pin="In",0,0,-4,-2
+Pin="Out",6,0,-10,-2
+
 [Circuit]
 Window Placement=2,3, -1,-1, -8,-31, 0,0,1451,591
 Default Object=Color=#000080
@@ -190,143 +191,8 @@ Show Attribute Text=True
 Show Grid Text=True
 
 [Comp]
-Name=INV
-Px=400,288
-
-[Attr]
-ON=12,-5,PART
-V=U11
-Style=8192
-
-[Attr]
-ON=13,-30,NAME
-V=INV
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
-[Attr]
-ON=0,11,$Param 1
-V
-Style=32768
-
-[Attr]
-ON=0,22,$Param 2
-V
-Style=32768
-
-[Comp]
-Name=INV
-Px=392,384
-
-[Attr]
-ON=10,-6,PART
-V=U9
-Style=8192
-
-[Attr]
-ON=13,-30,NAME
-V=INV
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
-[Attr]
-ON=0,11,$Param 1
-V
-Style=32768
-
-[Attr]
-ON=0,22,$Param 2
-V
-Style=32768
-
-[Comp]
-Name=INV
-Px=392,440
-
-[Attr]
-ON=11,-6,PART
-V=U10
-Style=8192
-
-[Attr]
-ON=13,-30,NAME
-V=INV
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
-[Attr]
-ON=0,11,$Param 1
-V
-Style=32768
-
-[Attr]
-ON=0,22,$Param 2
-V
-Style=32768
-
-[Comp]
-Name=INV
-Px=392,504
-
-[Attr]
-ON=10,-5,PART
-V=U12
-Style=8192
-
-[Attr]
-ON=13,-30,NAME
-V=INV
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
-[Attr]
-ON=0,11,$Param 1
-V
-Style=32768
-
-[Attr]
-ON=0,22,$Param 2
-V
-Style=32768
-
-[Comp]
-Name=INV
-Px=392,576
-
-[Attr]
-ON=10,-7,PART
-V=U13
-Style=8192
-
-[Attr]
-ON=13,-30,NAME
-V=INV
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
-[Attr]
-ON=0,11,$Param 1
-V
-Style=32768
-
-[Attr]
-ON=0,22,$Param 2
-V
-Style=32768
-
-[Comp]
 Name=Or5
-Px=976,320
+Px=824,320
 
 [Attr]
 ON=14,12,PART
@@ -477,7 +343,7 @@ Name=And5
 Px=672,544
 
 [Attr]
-ON=13,13,PART
+ON=15,10,PART
 V=U6
 Style=8192
 
@@ -547,22 +413,16 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=720,208,976,208
+Pxs=720,208,824,208
 
 [Wire]
-Pxs=976,208,976,320
-
-[Wire]
-Pxs=720,328,976,328
-
-[Wire]
-Pxs=720,336,976,336
+Pxs=720,328,824,328
 
 [Wire]
 Pxs=720,336,720,440
 
 [Wire]
-Pxs=760,344,976,344
+Pxs=760,344,824,344
 
 [Wire]
 Pxs=760,344,760,560
@@ -571,49 +431,19 @@ Pxs=760,344,760,560
 Pxs=720,560,760,560
 
 [Wire]
-Pxs=976,352,976,688
+Pxs=720,688,824,688
 
 [Wire]
-Pxs=720,688,976,688
+Pxs=152,144,152,240
 
 [Wire]
-Pxs=152,144,152,272
+Pxs=176,144,176,248
 
 [Wire]
-Pxs=176,144,176,264
+Pxs=224,144,224,264
 
 [Wire]
-Pxs=200,144,200,208
-
-[Wire]
-Pxs=224,144,224,248
-
-[Wire]
-Pxs=248,144,248,280
-
-[Wire]
-Pxs=136,248,224,248
-
-[Wire]
-Pxs=224,248,224,448
-
-[Wire]
-Pxs=136,256,200,256
-
-[Wire]
-Pxs=200,256,200,440
-
-[Wire]
-Pxs=136,264,176,264
-
-[Wire]
-Pxs=176,264,176,304
-
-[Wire]
-Pxs=136,272,152,272
-
-[Wire]
-Pxs=152,272,152,288
+Pxs=248,144,248,272
 
 [Wire]
 Pxs=152,288,272,288
@@ -632,9 +462,6 @@ Pxs=632,192,672,192
 
 [Wire]
 Pxs=632,312,672,312
-
-[Wire]
-Pxs=448,440,672,440
 
 [Wire]
 Pxs=544,544,672,544
@@ -695,12 +522,6 @@ Pxs=592,680,672,680
 
 [Wire]
 Pxs=592,552,592,680
-
-[Wire]
-Pxs=200,208,672,208
-
-[Wire]
-Pxs=200,208,200,256
 
 [Wire]
 Pxs=200,440,392,440
@@ -812,7 +633,7 @@ Pxs=248,704,672,704
 
 [Comp]
 Name=Stim8
-Px=64,288
+Px=64,280
 Rot=4
 
 [Attr]
@@ -853,17 +674,258 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=136,280,248,280
+Pxs=200,144,200,256
 
 [Wire]
-Pxs=248,280,248,344
+Pxs=328,208,672,208
 
 [Wire]
-Pxs=1024,336,1040,336
+Pxs=328,208,328,352
+
+[Wire]
+Pxs=200,352,328,352
+
+[Wire]
+Pxs=200,352,200,440
+
+[Comp]
+Name=Inverter
+Px=400,288
+Rot=4
+
+[Attr]
+ON=13,-6,PART
+V=U14
+Style=8192
+
+[Attr]
+ON=-68,-22,TIMING MODEL
+V=D0_GATE
+
+[Attr]
+ON=-59,-36,I/O MODEL
+V=IO_STD
+
+[Attr]
+ON=-20,-50,MNTYMXDLY
+V=0
+
+[Attr]
+ON=-20,-64,IO_LEVEL
+V=0
+
+[Attr]
+ON=-76,-78,POWER NODE
+V=$G_DPWR
+
+[Attr]
+ON=-73,-92,GROUND NODE
+V=$G_DGND
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Inverter
+Px=392,384
+Rot=4
+
+[Attr]
+ON=13,-6,PART
+V=U15
+Style=8192
+
+[Attr]
+ON=-68,-22,TIMING MODEL
+V=D0_GATE
+
+[Attr]
+ON=-59,-36,I/O MODEL
+V=IO_STD
+
+[Attr]
+ON=-20,-50,MNTYMXDLY
+V=0
+
+[Attr]
+ON=-20,-64,IO_LEVEL
+V=0
+
+[Attr]
+ON=-76,-78,POWER NODE
+V=$G_DPWR
+
+[Attr]
+ON=-73,-92,GROUND NODE
+V=$G_DGND
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Inverter
+Px=392,440
+Rot=4
+
+[Attr]
+ON=13,-6,PART
+V=U16
+Style=8192
+
+[Attr]
+ON=-68,-22,TIMING MODEL
+V=D0_GATE
+
+[Attr]
+ON=-59,-36,I/O MODEL
+V=IO_STD
+
+[Attr]
+ON=-20,-50,MNTYMXDLY
+V=0
+
+[Attr]
+ON=-20,-64,IO_LEVEL
+V=0
+
+[Attr]
+ON=-76,-78,POWER NODE
+V=$G_DPWR
+
+[Attr]
+ON=-73,-92,GROUND NODE
+V=$G_DGND
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Inverter
+Px=392,504
+Rot=4
+
+[Attr]
+ON=13,-6,PART
+V=U17
+Style=8192
+
+[Attr]
+ON=-68,-22,TIMING MODEL
+V=D0_GATE
+
+[Attr]
+ON=-59,-36,I/O MODEL
+V=IO_STD
+
+[Attr]
+ON=-20,-50,MNTYMXDLY
+V=0
+
+[Attr]
+ON=-20,-64,IO_LEVEL
+V=0
+
+[Attr]
+ON=-76,-78,POWER NODE
+V=$G_DPWR
+
+[Attr]
+ON=-73,-92,GROUND NODE
+V=$G_DGND
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Inverter
+Px=392,576
+Rot=4
+
+[Attr]
+ON=13,-6,PART
+V=U18
+Style=8192
+
+[Attr]
+ON=-68,-22,TIMING MODEL
+V=D0_GATE
+
+[Attr]
+ON=-59,-36,I/O MODEL
+V=IO_STD
+
+[Attr]
+ON=-20,-50,MNTYMXDLY
+V=0
+
+[Attr]
+ON=-20,-64,IO_LEVEL
+V=0
+
+[Attr]
+ON=-76,-78,POWER NODE
+V=$G_DPWR
+
+[Attr]
+ON=-73,-92,GROUND NODE
+V=$G_DGND
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=720,336,824,336
+
+[Wire]
+Pxs=448,440,672,440
+
+[Wire]
+Pxs=136,240,152,240
+
+[Wire]
+Pxs=152,240,152,288
+
+[Wire]
+Pxs=136,248,176,248
+
+[Wire]
+Pxs=176,248,176,304
+
+[Wire]
+Pxs=136,256,200,256
+
+[Wire]
+Pxs=200,256,200,352
+
+[Wire]
+Pxs=136,264,224,264
+
+[Wire]
+Pxs=224,264,224,448
+
+[Wire]
+Pxs=136,272,248,272
+
+[Wire]
+Pxs=248,272,248,344
+
+[Wire]
+Pxs=872,336,888,336
+
+[Wire]
+Pxs=824,208,824,320
+
+[Wire]
+Pxs=824,352,824,688
 
 [Grid Text]
 Text="Y"
-Px=1040,336
+Px=888,336
 GridSnap=True
 JustifyH=Left
 JustifyV=Bottom
@@ -1105,9 +1167,9 @@ PrinterScale=1
 Scale 0=1
 Scale 1=1
 Scale 2=1
-SB 3=0,61
+SB 3=0,37
 Scale 3=1
-Px=1168,438
+Px=951,491
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -1156,7 +1218,7 @@ Type=Text
 Print=False
 Enable=True
 Name=Text
-SB 0=0,11
+SB 0=27,11
 Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
 Comment Color=#008000
 WinBackGround Color=#FFFFFF
@@ -1172,7 +1234,6 @@ Type=Text
 Print=False
 Enable=True
 Name=Models
-SB 0=23,3
 Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
 Comment Color=#008000
 WinBackGround Color=#FFFFFF
@@ -1243,7 +1304,7 @@ WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
 Select Box Color=#000080
-Title
+Title=LR1.cir
 AutoTitle=Yes
 Grid Color=#808080
 Grid Weight=1
@@ -1306,7 +1367,7 @@ MonMaxShow=7
 MonPageWidth=66
 MonPlotWidth=21
 MonExprXWidth=142
-MonExprYWidth=367
+MonExprYWidth=234
 MonRangeXWidth=90
 MonRangeYWidth=90
 AnimateWait=None
@@ -1489,7 +1550,7 @@ Analysis=Transient
 Plt=1
 AliasID=1
 XExp=T
-YExp=dec(x1,x2,x3,x4,x5)
+YExp=dec(x5,x4,x3,x2,x1)
 XRng=AUTOALWAYS
 YRng=AUTOALWAYS
 Options=LINEARX,LINEARY
